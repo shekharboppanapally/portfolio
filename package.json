@@ -5,7 +5,7 @@
   "description": "A stunning portfolio website built with React, Vite, and Three.js featuring interactive 3D animations",
   "type": "module",
   "author": "Your Name",
-  "homepage": "https://shekhar.github.io/portfolio",
+  "homepage": "https://shekharboppanapally.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
