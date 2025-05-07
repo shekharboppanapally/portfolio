@@ -15,6 +15,11 @@ const HomeContainer = styled.section`
   padding-top: 70px;
   overflow: hidden;
   
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
+    align-items: flex-start;
+    padding-top: 120px; /* Increased padding-top for mobile */
+  }
+  
   @media (max-height: 500px) and (orientation: landscape) {
     height: auto;
     min-height: 100vh;
