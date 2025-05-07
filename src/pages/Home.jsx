@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
@@ -90,7 +91,7 @@ const ButtonGroup = styled(motion.div)`
   }
 `;
 
-const PrimaryButton = styled(motion.a)`
+const PrimaryButton = styled(motion(Link))`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -100,13 +101,14 @@ const PrimaryButton = styled(motion.a)`
   border-radius: 4px;
   font-weight: 600;
   transition: all 0.3s ease;
+  text-decoration: none;
   
   &:hover {
     box-shadow: ${props => props.theme.shadows.button};
   }
 `;
 
-const SecondaryButton = styled(motion.a)`
+const SecondaryButton = styled(motion(Link))`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -117,6 +119,7 @@ const SecondaryButton = styled(motion.a)`
   border-radius: 4px;
   font-weight: 600;
   transition: all 0.3s ease;
+  text-decoration: none;
   
   &:hover {
     background-color: rgba(255, 255, 255, 0.05);
@@ -257,7 +260,7 @@ const Home = () => {
             animate="show"
           >
             <PrimaryButton
-              href="projects"
+              to="/projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -265,7 +268,7 @@ const Home = () => {
             </PrimaryButton>
             
             <SecondaryButton
-              href="contact"
+              to="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
